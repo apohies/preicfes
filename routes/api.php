@@ -19,3 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/usuarios','Prueba\PruebaApicontroller@index');
+Route::get('/institutions','institutions\institutionsApiController@getAllInstitutions');
+Route::get('/schoolgrades','schoolgrades\schoolgradesApiController@getAllSchoolGrades');
+Route::get('/areas','areas\AreasApiController@getAllAreas');
+Route::get('/questionlevels','questionlevels\QuestionsLevelsApiController@getAllQuestionsLevels');
