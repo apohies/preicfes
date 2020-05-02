@@ -14,7 +14,7 @@ class CreateQuestionLevelsTable extends Migration
     public function up()
     {
         Schema::create('questionLevels', function (Blueprint $table) {
-            $table->bigIncrements('idQuestionLevel');
+            $table->id('idQuestionLevel');
             $table->unsignedBigInteger('idArea');
             $table->string('levelName');
             $table->string('levelInfo');
