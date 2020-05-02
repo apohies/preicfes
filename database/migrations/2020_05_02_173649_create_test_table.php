@@ -14,7 +14,7 @@ class CreateTestTable extends Migration
     public function up()
     {
         Schema::create('test', function (Blueprint $table) {
-            $table->bigIncrements('idTest');
+            $table->id('idTest');
             $table->unsignedBigInteger('idArea');
             $table->string('testName');
             $table->string('testInfo');

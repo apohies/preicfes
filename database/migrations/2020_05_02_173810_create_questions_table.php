@@ -14,7 +14,7 @@ class CreateQuestionsTable extends Migration
     public function up()
     {
         Schema::create('questions', function (Blueprint $table) {
-            $table->bigIncrements('idQuestion');
+            $table->id('idQuestion');
             $table->unsignedBigInteger('idQuestionLevel');
             $table->enum('questionType', ['OPEN', 'MULTIPLE','YES/NO']);
             $table->string('textQuestion');

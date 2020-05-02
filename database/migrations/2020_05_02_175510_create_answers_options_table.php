@@ -14,7 +14,7 @@ class CreateAnswersOptionsTable extends Migration
     public function up()
     {
         Schema::create('answers_options', function (Blueprint $table) {
-            $table->bigIncrements('idAnswerOption');
+            $table->id('idAnswerOption');
             $table->unsignedBigInteger('idQuestion');
             $table->enum('type', ['ANSWER', 'OPTION']);
             $table->string('text');
