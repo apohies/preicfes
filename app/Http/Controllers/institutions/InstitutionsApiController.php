@@ -27,4 +27,12 @@ class InstitutionsApiController extends Controller
 
         return response()->json(['institution'=>$institutions]);
     }
+
+    public function createInstitution( Request $request)
+    {
+        DB::table('institutions')->insert(['institutionName'=>$request->name,
+                                                        'institutionInfo'=>$request->description]);
+
+         return response()->json('se envio');                                                
+    }
 }
