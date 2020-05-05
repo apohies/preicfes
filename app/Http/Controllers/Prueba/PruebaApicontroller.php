@@ -12,7 +12,7 @@ class PruebaApicontroller extends Controller
     public function index()
     {
         $usuarios=User::all();
-
+        
         return response()->json(['user'=>$usuarios]);
 
     }

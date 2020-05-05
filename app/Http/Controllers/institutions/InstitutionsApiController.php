@@ -17,4 +17,14 @@ class InstitutionsApiController extends Controller
 
         return response()->json(['instituciones'=>$institutions]);
     }
+
+    public function getInstitution(Request $request)
+    {
+        $institutions = DB::table('institutions')
+        ->select('institutions.institutionName as nombre_institucion','institutions.institutionInfo as info_institucion')
+        ->where('idInstitution',$request->id)
+        ->first();
+
+        return response()->json(['institution'=>$institutions]);
+    }
 }
