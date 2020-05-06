@@ -25,7 +25,8 @@ Route::get('/usuarios','Prueba\PruebaApicontroller@index');
 Route::get('/institutions','institutions\institutionsApiController@getAllInstitutions');
 Route::get('/institutions/{id}','institutions\institutionsApiController@getInstitution');
 Route::post('/institutions','institutions\institutionsApiController@createInstitution');
-
+Route::get('/datatable','institutions\institutionsApiController@getDataTableInfo');
+Route::get('/datatableinfo','institutions\institutionsApiController@getInstitutionsDataTable');
 
 
 
